@@ -1,0 +1,221 @@
+/* FONTS */
+@font-face {
+    font-family: "Butler";
+    src: url("butler.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "ButlerLight";
+    src: url("butlerlight.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Creato";
+    src: url("creato.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "CreatoLight";
+    src: url("creatolight.otf") format("truetype");
+}
+
+/* ANIMATIONS */
+@keyframes blink {
+    0%, 100% {
+        opacity: 0;
+    }
+    
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.8;
+    }
+}
+
+* {
+    color: #6cab4b;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #0D0D0D;
+    margin: 0;
+    min-height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image: url("noise.png");
+    background-repeat: repeat;
+
+    opacity: 1;
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+h1 {
+    font-size: 150px;
+    margin: 0;
+    margin-left: 55px;
+    font-family: Butler;
+    user-select: none;
+}
+
+h2 {
+    font-size: 80px;
+    margin: 0;
+    font-family: Butler;
+}
+
+h3 {
+    font-size: 24px;
+    margin: -50px 0 30px 0px;
+    font-family: ButlerLight;
+    letter-spacing: 0px;
+    animation: fadeIn 0.7s ease-out 1.5s both;
+}
+
+p {
+    font-size: 20px;
+    margin: 0;
+    font-family: Creato;
+    opacity: 0.9;
+    text-align: justify;
+}
+
+i {
+    opacity: 0.7;
+    font-size: 18px;
+}
+
+#title::after {
+    content: "|";
+    font-family: CreatoLight;
+    margin-left: 0px;
+    animation: blink 0.8s 5 forwards;
+}
+
+.container {
+    text-align: center;
+    max-width: 40vw;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    width: 17vw;
+    margin: 0 auto;
+    font-size: 17px;
+}
+
+.nav li {
+    opacity: 0.05;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: calc(2s + (var(--i) * 0.2s));
+    display: flex;
+    align-items: center;
+    font-family: Creato;
+    gap: 10px;
+    transition: transform 0.25s ease;
+}
+
+.nav li:hover {
+    opacity: 1;
+    transform: translateX(6px);
+    transition: transform 0.25s ease;
+}
+
+.nav li:hover a {
+    color: #D6A84F;
+}
+
+.nav li span {
+    flex: 1;
+    border-bottom: 1px solid #6cab4b; 
+}
+
+.nav li:hover span {
+    flex: 1;
+    border-bottom: 1px solid #D6A84F; 
+}
+
+.back {
+    font-size: 25px;
+    margin: 0;
+}
+
+.inline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 0 0 0 -50px;
+}
+
+
+.page {
+    position: fixed;
+    inset: 0;
+
+    background-image: url("noise.png");
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.1s ease,
+        visibility 0s linear 0.1s;
+}
+
+.page.active {
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 0.1s ease,
+        visibility 0s linear 0s;
+}
+
+.page button {
+    background: none;
+    border: none;
+    color: #6cab4b;
+    font-family: Creato;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.5s ease;
+}
+
+.page button:hover {
+    color: #D6A84F;
+    transition: color 0.5s ease;
+}
+
+.link:hover {
+    color: #D6A84F;
+    transition: color 0.5s ease;
+}

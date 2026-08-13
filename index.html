@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jonlat</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <!-- HOME -->
+        <div class="container">
+            <h1 id="title"></h1>
+
+            <h3>computer science and cybersecurity enthusiast</h3>
+
+            <ul class="nav">
+                <li style="--i: 0">
+                    <a href="#" onclick="showPage('about')">about</a>
+                    <span></span>
+                    <a href="#" onclick="showPage('about')">1</a>
+                </li>
+
+                <li style="--i: 1">
+                    <a href="#" onclick="showPage('projects')">projects</a>
+                    <span></span>
+                    <a href="#" onclick="showPage('projects')">2</a>
+                </li>
+
+                <li style="--i: 2">
+                    <a href="#" onclick="showPage('contact')">contact</a>
+                    <span></span>
+                    <a href="#" onclick="showPage('contact')">3</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- ABOUT -->
+        <section id="about" class="page">
+
+            <div class="container">
+
+                <div class="inline">
+                    <button onclick="hidePage('about')" class="back">←</button>
+                    <h2>about</h2>
+                </div>
+
+                <p>
+                Most of my time goes into cybersecurity, Linux, networking, and programming. I learn mostly through personal projects and hands-on work, jumping between labs, experiments, and whatever I'm currently interested in.
+                <br>
+                Still figuring out where all of this leads, but there's plenty to build along the way.
+                </p>
+
+                <h2>education</h2>
+
+                <p>
+                    Bachelor of Science in Computer Science and Engineering<br>
+                    <i>UBT - University for Business and Technology<br>
+                    2026 - 2029 *</i>
+                </p>
+
+                <h2>certifications</h2>
+
+                <p>
+                    1. ISC2 Certified in Cybersecurity (CC)<br>
+                    <i>ISC2 - In Progress</i>
+                </p>
+
+                <p>
+                    2. Linux Unhatched<br>
+                    <i>NDG - 2026</i>
+                </p>
+
+                <p>
+                    3. IT Customer Support Basics<br>
+                    <i>Cisco - 2026</i>
+                </p>
+
+                <p>
+                    4. Operating Systems Support<br>
+                    <i>Cisco - 2026</i>
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECTS -->
+        <section id="projects" class="page">
+
+            <div class="container">
+
+                <div class="inline">
+                    <button onclick="hidePage('projects')" class="back">←</button>
+                    <h2>projects</h2>
+                </div>
+
+                <div class="projectdiv">
+                <a href="https://github.com/jon-lat/wazuh-soc-lab"><p class="link">
+                    1. Wazuh SOC Lab
+                    <br><i>Wazuh · Ubuntu Server · KVM/QEMU</i>
+                </p></a>
+
+                <a href="https://github.com/jon-lat/linux-server-admin-lab"><p class="link">
+                    2.  Hardened Linux Server
+                    <br><i>Linux · Ubuntu Server · Security</i>
+                </p></a>
+
+                <a href="https://github.com/jon-lat/dotfiles"><p class="link">
+                    3.  Hyprland Dotfiles <i>(old)</i>
+                    <br><i>Linux · Hyprland · Dotfiles</i>
+                </p></a>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+        <section id="contact" class="page">
+
+            <div class="container">
+
+                <div class="inline">
+                    <button onclick="hidePage('contact')" class="back">←</button>
+                    <h2>contact</h2>
+                </div>
+
+                <p>email: jonlatifi@proton.me</p>
+
+                <p>linkedin: <a class="link" href="https://www.linkedin.com/in/jonlatifi/">https://www.linkedin.com/in/jonlatifi/</a></p>
+
+                <p>github: <a class="link" href="https://github.com/jon-lat">https://github.com/jon-lat</a></p>
+
+            </div>
+
+        </section>
+
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
