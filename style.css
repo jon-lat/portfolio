@@ -75,9 +75,10 @@ body::before {
 h1 {
     font-size: 150px;
     margin: 0;
-    margin-left: 100px;
+    margin-left: 150px;
     font-family: Butler;
     user-select: none;
+    white-space: nowrap;
 }
 
 h2 {
@@ -92,6 +93,8 @@ h3 {
     font-family: ButlerLight;
     letter-spacing: 0px;
     animation: fadeIn 0.7s ease-out 1.5s both;
+    white-space: nowrap;
+
 }
 
 p {
@@ -116,7 +119,8 @@ i {
 
 .container {
     text-align: center;
-    width: min(800px, 90vw);
+    max-width: 40vw;
+    min-width: 20vw;
 }
 
 .nav {
