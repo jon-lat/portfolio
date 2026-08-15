@@ -132,7 +132,7 @@ i {
 }
 
 .nav li {
-    opacity: 0.05;
+    opacity: 0;
     animation: fadeIn 1s ease forwards;
     animation-delay: calc(2s + (var(--i) * 0.2s));
     display: flex;
