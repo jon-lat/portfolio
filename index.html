@@ -7,34 +7,37 @@
     </head>
 
     <body>
+        <!-- MATRIX BG -->
+        <canvas id="matrix"></canvas>
 
         <!-- HOME -->
-        <div class="container">
-            <h1 id="title"></h1>
+        <section id="main" class="page active">
+            <div class="container">
+                <h1 id="title"></h1>
 
-            <h3>computer science and cybersecurity enthusiast</h3>
+                <h3>computer science and cybersecurity enthusiast</h3>
 
-            <ul class="nav">
-                <li style="--i: 0">
-                    <a href="#" onclick="showPage('about')">about</a>
-                    <span></span>
-                    <a href="#" onclick="showPage('about')">1</a>
-                </li>
+                <ul class="nav">
+                    <li style="--i: 0">
+                        <a href="#" onclick="showPage('about'); hidePage('main')">about</a>
+                        <span></span>
+                        <a href="#" onclick="showPage('about'); hidePage('main')">1</a>
+                    </li>
 
-                <li style="--i: 1">
-                    <a href="#" onclick="showPage('projects')">projects</a>
-                    <span></span>
-                    <a href="#" onclick="showPage('projects')">2</a>
-                </li>
+                    <li style="--i: 1">
+                        <a href="#" onclick="showPage('projects'); hidePage('main')">projects</a>
+                        <span></span>
+                        <a href="#" onclick="showPage('projects'); hidePage('main')">2</a>
+                    </li>
 
-                <li style="--i: 2">
-                    <a href="#" onclick="showPage('contact')">contact</a>
-                    <span></span>
-                    <a href="#" onclick="showPage('contact')">3</a>
-                </li>
-            </ul>
-        </div>
-
+                    <li style="--i: 2">
+                        <a href="#" onclick="showPage('contact'); hidePage('main')">contact</a>
+                        <span></span>
+                        <a href="#" onclick="showPage('contact'); hidePage('main')">3</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
         <!-- ABOUT -->
         <section id="about" class="page">
@@ -42,7 +45,7 @@
             <div class="container">
 
                 <div class="inline">
-                    <button onclick="hidePage('about')" class="back">←</button>
+                    <button onclick="hidePage('about'); showPage('main')" class="back">←</button>
                     <h2>about</h2>
                 </div>
 
@@ -93,7 +96,7 @@
             <div class="container">
 
                 <div class="inline">
-                    <button onclick="hidePage('projects')" class="back">←</button>
+                    <button onclick="hidePage('projects'); showPage('main')" class="back">←</button>
                     <h2>projects</h2>
                 </div>
 
@@ -124,7 +127,7 @@
             <div class="container">
 
                 <div class="inline">
-                    <button onclick="hidePage('contact')" class="back">←</button>
+                    <button onclick="hidePage('contact'); showPage('main')" class="back">←</button>
                     <h2>contact</h2>
                 </div>
 
