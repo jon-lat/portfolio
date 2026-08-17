@@ -174,7 +174,6 @@ i {
 }
 
 .nav li:hover {
-    opacity: 1;
     transform: translateX(6px);
 }
 
